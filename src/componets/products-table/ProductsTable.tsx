@@ -24,7 +24,7 @@ const headCells: HeadCell[] = [
   { id: "image", label: "Image", sortable: false },
   { id: "name", label: "Name", sortable: true },
   { id: "color", label: "Color", sortable: true },
-  { id: "stock", label: "Stock", sortable: true },
+  { id: "stock", label: "Stock", sortable: false },
   { id: "price", label: "Price", sortable: true },
   { id: "buy", label: "Buy", sortable: false },
 ];

@@ -1,3 +1,5 @@
+import { Product } from "@/types/product.type";
+
 // Comparator logic for sorting
 export const descendingComparator = <T>(a: T, b: T, orderBy: keyof T) => {
   if (b[orderBy] < a[orderBy]) return -1;
@@ -5,10 +7,13 @@ export const descendingComparator = <T>(a: T, b: T, orderBy: keyof T) => {
   return 0;
 };
 
-export const getComparator = (order: "asc" | "desc", orderBy) => {
+export const getComparator = (
+  order: "asc" | "desc",
+  orderBy: keyof Product
+) => {
   return order === "desc"
-    ? (a, b) => descendingComparator(a, b, orderBy)
-    : (a, b) => -descendingComparator(a, b, orderBy);
+    ? (a: Product, b: Product) => descendingComparator<Product>(a, b, orderBy)
+    : (a: Product, b: Product) => -descendingComparator<Product>(a, b, orderBy);
 };
 
 export function stableSort<T>(array: T[], comparator: (a: T, b: T) => number) {
