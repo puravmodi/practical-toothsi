@@ -30,7 +30,7 @@ const headCells: HeadCell[] = [
 ];
 
 const ProductsTable: FunctionComponent = () => {
-  const [orderBy, setOrderBy] = useState<Product["name"]>("name");
+  const [orderBy, setOrderBy] = useState<keyof Product>("name");
   const [order, setOrder] = useState<"asc" | "desc">("asc");
   const { products } = useFilters();
 

@@ -7,8 +7,8 @@ type TableHeaderProps = {
   headCell: HeadCell;
   order: "asc" | "desc";
   setOrder: Dispatch<SetStateAction<"asc" | "desc">>;
-  orderBy: Product["name"];
-  setOrderBy: Dispatch<SetStateAction<Product["name"]>>;
+  orderBy: keyof Product;
+  setOrderBy: Dispatch<SetStateAction<keyof Product>>;
 };
 
 const TableHeader: FunctionComponent<TableHeaderProps> = ({
