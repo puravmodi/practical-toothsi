@@ -50,9 +50,6 @@ const CartProductsTable: FunctionComponent = () => {
 
   return (
     <TableContainer component={Paper}>
-      <Typography variant="h6" component="div" sx={{ padding: 2 }}>
-        Product List
-      </Typography>
       <Table>
         <TableHead>
           <TableRow>

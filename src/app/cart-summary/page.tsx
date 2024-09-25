@@ -2,6 +2,10 @@ import Grid from "@mui/material/Grid2";
 import CartAmountSummary from "@/componets/CartAmountSummary";
 import CartProductsTable from "@/componets/cart-products-table/CartProductsTable";
 
+export const metadata = {
+  title: "Cart Summary",
+};
+
 const CartPage = () => {
   return (
     <Grid container spacing={2}>

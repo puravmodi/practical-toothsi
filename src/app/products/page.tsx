@@ -5,6 +5,10 @@ import { FilterProvider } from "@/context/FilterProvider";
 import { Box } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 
+export const metadata = {
+  title: "Products",
+};
+
 const ProductsPage = async () => {
   return (
     <FilterProvider>

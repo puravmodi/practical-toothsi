@@ -8,10 +8,7 @@ import { useFilters } from "@/context/FilterProvider";
 const allSizes = uniqBy(products, "size")?.map((product) => product.size);
 
 const SizeFilter: FunctionComponent = () => {
-  console.log("@@@ Size FIlter re-rendered");
-
   const { size, updateSize } = useFilters();
-
   return (
     <FormControl fullWidth>
       <InputLabel size="small">Size</InputLabel>

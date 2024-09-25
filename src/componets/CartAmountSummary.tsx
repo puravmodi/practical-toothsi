@@ -29,7 +29,7 @@ const CartAmountSummary = () => {
           Subtotal
         </Typography>
         <Typography variant="subtitle2" component="div">
-          {subTotal}$
+          ${subTotal}
         </Typography>
       </Box>
       <Box display="flex" justifyContent="space-between" alignItems="center">
@@ -37,7 +37,7 @@ const CartAmountSummary = () => {
           Total
         </Typography>
         <Typography variant="subtitle1" component="div">
-          {subTotal}$
+          ${subTotal}
         </Typography>
       </Box>
       <Link href={subTotal === 0 ? "" : "/checkout"}>
