@@ -13,7 +13,6 @@ import { FunctionComponent, useState } from "react";
 import ProductRow from "./ProductRow";
 import TableHeader from "./TableHeader";
 import { useFilters } from "@/context/FilterProvider";
-import { useCart } from "@/context/CartContextProvider";
 
 export interface HeadCell {
   id: keyof Product | "buy";
@@ -34,7 +33,6 @@ const ProductsTable: FunctionComponent = () => {
   const [orderBy, setOrderBy] = useState<Product["name"]>("name");
   const [order, setOrder] = useState<"asc" | "desc">("asc");
   const { products } = useFilters();
-  const { overStockProduct, setOverStockProduct } = useCart();
 
   return (
     <TableContainer
