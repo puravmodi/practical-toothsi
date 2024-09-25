@@ -26,7 +26,7 @@ const CartProductsRow: FunctionComponent<CartDetailsRowProps> = ({
   const { removeFromCart, updateQuantity } = useCart();
   return (
     <TableRow key={product.id}>
-      <TableCell sx={{ maxWidth: "200px" }}>
+      <TableCell>
         <Box display="flex" alignItems="center" gap={4}>
           <IconButton
             aria-label="close"
@@ -34,14 +34,13 @@ const CartProductsRow: FunctionComponent<CartDetailsRowProps> = ({
           >
             <CloseIcon />
           </IconButton>
-
           <Image
             src={product.image}
             alt={product.name}
             height={50}
             width={50}
           />
-          <Typography>{product.name}</Typography>
+          <Typography sx={{ width: "200px" }}>{product.name}</Typography>
         </Box>
       </TableCell>
       <TableCell align="right">${product.price.toFixed(2)}</TableCell>
