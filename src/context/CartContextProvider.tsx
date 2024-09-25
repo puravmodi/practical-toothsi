@@ -1,8 +1,10 @@
 "use client";
-import React, {
+import {
   createContext,
+  Dispatch,
   FunctionComponent,
   PropsWithChildren,
+  SetStateAction,
   useContext,
   useMemo,
   useState,
@@ -16,11 +18,12 @@ export interface CartItem {
 interface CartContextType {
   cart: CartItem[];
   subTotal: number;
+  setSubTotal: Dispatch<SetStateAction<number>>;
   addToCart: (product: CartItem) => void;
   removeFromCart: (productId: number) => void;
   updateQuantity: (productId: number, quantity: number) => void;
   clearCart: () => void;
-  setCart: React.Dispatch<React.SetStateAction<CartItem[]>>;
+  setCart: Dispatch<SetStateAction<CartItem[]>>;
 }
 
 // Create the context

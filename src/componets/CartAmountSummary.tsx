@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { Box, Button, Card, Typography } from "@mui/material";
 import Link from "next/link";
 import { useCart } from "@/context/CartContextProvider";
@@ -41,8 +40,13 @@ const CartAmountSummary = () => {
           {subTotal}$
         </Typography>
       </Box>
-      <Link href={"/thank-you"}>
-        <Button variant="contained" sx={{ borderRadius: "50px" }} fullWidth>
+      <Link href={subTotal === 0 ? "" : "/checkout"}>
+        <Button
+          variant="contained"
+          sx={{ borderRadius: "50px" }}
+          disabled={subTotal === 0}
+          fullWidth
+        >
           Proceed to checkout
         </Button>
       </Link>
