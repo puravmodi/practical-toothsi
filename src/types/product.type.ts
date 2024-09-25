@@ -10,3 +10,9 @@ export interface Product {
   quantity: number;
   isSelected: boolean;
 }
+
+export interface HeadCell {
+  id: keyof Product | "buy";
+  label: string;
+  sortable: boolean;
+}

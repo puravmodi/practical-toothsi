@@ -20,18 +20,9 @@ const AddToCart: FunctionComponent = () => {
         id: product.id,
         quantity: product.quantity,
       }));
-    const overstockedProducts = products
-      .filter((product) => product.quantity > product.stock)
-      .map((product) => ({
-        name: product.name,
-        stock: product.stock,
-        id: product.id,
-      }));
     setCart(selectedProducts);
-    if (overstockedProducts?.length == 0) {
-      if (selectedProducts?.length) {
-        router?.push("/cart-summary");
-      }
+    if (selectedProducts?.length) {
+      router?.push("/cart-summary");
     }
   };
 

@@ -28,9 +28,9 @@ const CartProductsTable: FunctionComponent = () => {
   const [isLoading, setisLoading] = useState(true);
 
   useEffect(() => {
-    const getSelectedProducts = async () => {
+    const getSelectedProducts = () => {
       const selectedIds = cart?.map((item) => item.id);
-      const products: Product[] = await getProductById(selectedIds);
+      const products: Product[] = getProductById(selectedIds || []);
       const updatedProducts: Product[] = products.map((product) => {
         const cartItem = cart?.find((cartItem) => cartItem.id === product.id);
         return {

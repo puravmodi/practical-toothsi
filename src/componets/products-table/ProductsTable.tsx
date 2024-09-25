@@ -1,5 +1,5 @@
 "use client";
-import { Product } from "@/types/product.type";
+import { HeadCell, Product } from "@/types/product.type";
 import { getComparator, stableSort } from "@/utils/product-table.utils";
 import {
   TableContainer,
@@ -13,12 +13,6 @@ import { FunctionComponent, useState } from "react";
 import ProductRow from "./ProductRow";
 import TableHeader from "./TableHeader";
 import { useFilters } from "@/context/FilterProvider";
-
-export interface HeadCell {
-  id: keyof Product | "buy";
-  label: string;
-  sortable: boolean;
-}
 
 const headCells: HeadCell[] = [
   { id: "image", label: "Image", sortable: false },

@@ -11,7 +11,6 @@ const allCategories = uniqBy(products, "category")?.map(
 
 const CategoryFilter: FunctionComponent = () => {
   const { category, updateCategory } = useFilters();
-
   return (
     <FormControl fullWidth>
       <InputLabel size="small">Category</InputLabel>
