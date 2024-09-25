@@ -1,7 +1,6 @@
-import { Product } from "@/types/product.type";
+import { HeadCell, Product } from "@/types/product.type";
 import { TableCell, TableSortLabel } from "@mui/material";
 import { Dispatch, FunctionComponent, SetStateAction } from "react";
-import { HeadCell } from "./ProductsTable";
 
 type TableHeaderProps = {
   headCell: HeadCell;
